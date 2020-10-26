@@ -3,6 +3,7 @@ import excerciseList, { muscles } from './excerciseList'
 import ListExcercises, { DoubleFilter, MapTrainingDays } from './Methods'
 import Presentational from './Presentational'
 import './index.css'
+import Navbar from './Navbar'
 
 
 
@@ -44,6 +45,8 @@ class Form extends React.Component {
     
     return (
       <div className='form'>
+      <div><Navbar/></div>
+      <hr />
       <div className='button'>
       <button onClick={this.createByClick} type='button' className="btn btn-outline-light">{!this.state.isClicked ? 
               'Create training!' : 'Training created!'}</button>

@@ -2,6 +2,40 @@
   background-color: #BADBFF;
   font-family: 'Nunito', sans-serif;
 }
+
+.navbar {
+ display: flex;
+ justify-content: flex-end;
+ background-color: #010326;
+ height: 75px; 
+ position: fixed;
+ z-index: 10;
+ width: 97%;
+ top: 0;
+ left: 0;
+ color: #D9CCC1;
+ border: 2px solid;
+ border-radius: 5px;
+ margin-left: 10px;
+ 
+ 
+
+}
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 27px;
+  font-weight: bold;
+  position: relative;
+  color: #D9CCC1;
+}
+.link-block {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
 .form {
   background-color: #010326;
   width: 100%;
@@ -11,7 +45,8 @@
 .button {
   display: flex;
   gap: 5px;
- 
+ position: relative;
+ margin-top: 75px
   
 
 }

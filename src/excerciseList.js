@@ -1,4 +1,4 @@
- const excerciseList = [
+const excerciseList = [
     {
         name: 'Biceps curl',
         difficulty: 1,

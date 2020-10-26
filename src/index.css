@@ -1,0 +1,44 @@
+.background {
+  background-color: #BADBFF;
+  font-family: 'Nunito', sans-serif;
+}
+.form {
+  background-color: #010326;
+  width: 100%;
+  padding: 10px;
+  
+}
+.button {
+  display: flex;
+  gap: 5px;
+ 
+  
+
+}
+.trainings {
+  font-size: 15px;
+  font-weight: bold;
+  margin: auto 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  position: relative; 
+  top: 5px;
+  bottom: 15px;
+  color: #D9CCC1;
+  border: 2px solid;
+  border-radius: 5px;
+  
+} 
+.select {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+  gap: 5px;
+}
+.day {
+  color: #D9CCC1;
+  font-size: 25px;
+  font-weight: bold;
+  margin: auto 10px;
+}

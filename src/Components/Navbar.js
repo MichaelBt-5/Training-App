@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './index.css'
+import '../index.css'
 
 const Navbar = () => {
     return(
@@ -8,6 +8,8 @@ const Navbar = () => {
         <div className='link-block'>
         <Link className='link' to='/'>Home</Link>
         <Link className='link' to='/trainings'>Trainings</Link>
+        <Link className='link' to='/popular'>Popular trainings</Link>
+        <Link className='link' to='about'>About</Link>
         </div>
         </nav>
     )

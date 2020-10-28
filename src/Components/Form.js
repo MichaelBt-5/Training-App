@@ -1,8 +1,8 @@
 import React from 'react'
-import excerciseList, { muscles } from './excerciseList'
-import ListExcercises, { DoubleFilter, MapTrainingDays } from './Methods'
+import excerciseList, { muscles } from '../excerciseList'
+import ListExcercises, { DoubleFilter, MapTrainingDays } from '../Methods'
 import Presentational from './Presentational'
-import './index.css'
+import '../index.css'
 import Navbar from './Navbar'
 
 
@@ -46,7 +46,7 @@ class Form extends React.Component {
     return (
       <div className='form'>
       <div><Navbar/></div>
-      <hr />
+      <br/>
       <div className='button'>
       <button onClick={this.createByClick} type='button' className="btn btn-outline-light">{!this.state.isClicked ? 
               'Create training!' : 'Training created!'}</button>
@@ -54,12 +54,12 @@ class Form extends React.Component {
       <button onClick={this.handleClick} type='button' className="btn btn-outline-light">See all available excercises</button>
       </div>
       
-      <hr/>
+     <br/>
       <Presentational 
           handleChange={this.handleChange}
           data={this.state} 
         />
-        <hr />
+       <br/>
         {this.state.isClicked && this.state.trainingDays ? 
         <MapTrainingDays data={this.state} /> : this.state.isClicked ? <DoubleFilter data={this.state} /> : null}
         {this.state.showBase ? <ListExcercises items={excerciseList} muscle={muscles} /> :

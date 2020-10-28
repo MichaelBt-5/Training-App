@@ -1,6 +1,5 @@
 import React from 'react'
 import excerciseList, { excerciseToMuscle, muscles } from './excerciseList'
-//import Styles from './styles'
 
 
 
@@ -13,7 +12,7 @@ const ListExcercises = ({ items }) => {
             if (item.muscleGroup === muscle.muscle) {
                 array.push(
                     <ul key={item.id}>
-                        <li>Excercise name: {item.name}</li>
+                        <h5>{item.name.toUpperCase()}</h5>
                         <li>Excercise difficulty: {item.advance}</li>
                         <li>Working muscles: <MapMuscles id={item.id}/></li>
                         <li>Training type: {item.trainingType}</li>

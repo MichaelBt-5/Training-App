@@ -22,7 +22,7 @@ function Presentational({data, handleChange}) {
         onChange={handleChange}>
         <option value=''>Training type</option>
         <option value='Strength training'>Strength training</option>
-        <option value='Conditioning training'>Conditioning training</option>
+        <option value='Bodybuilding'>Bodybuilding</option>
         <option value='Crossfit training'>Crossfit training</option>
         </select>
         <select

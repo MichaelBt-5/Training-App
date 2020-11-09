@@ -1,6 +1,6 @@
 import React from 'react'
 import excerciseList, { muscles } from '../excerciseList'
-import ListExcercises, { DoubleFilter, MapTrainingDays } from '../Methods'
+import ListExcercises, { DoubleFilter, ImportanceFiltering, MapTrainingDays } from '../Methods'
 import Presentational from './Presentational'
 import '../index.css'
 import Navbar from './Navbar'
@@ -64,6 +64,7 @@ class Form extends React.Component {
         <MapTrainingDays data={this.state} /> : this.state.isClicked ? <DoubleFilter data={this.state} /> : null}
         {this.state.showBase ? <ListExcercises items={excerciseList} muscle={muscles} /> :
          null}
+         <ImportanceFiltering />
       </div>
     )
   }

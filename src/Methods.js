@@ -30,7 +30,7 @@ const ListExcercises = ({ items }) => {
                 <h2> {muscle.muscle}</h2>
                 <div>{array}</div>
             </div>
-        )
+        )    
     })
     return (
         <div className='trainings'>
@@ -54,7 +54,6 @@ export const DoubleFilter = ({ data }) => {
                 items={filteredDoubles} 
             />
             </div>
-           
         )
     } else if (data.difficulty) {
         return (
@@ -105,6 +104,39 @@ export const MapMuscles = ({ id }) => {
               ListOfMuscles.push(muscle + " ") : null) : null)
         
                 return ( <span>{ListOfMuscles}</span> )
+}
+
+
+export const ImportanceFiltering = () => {
+    let byCategoryArray = []
+      excerciseList.map(({id, name, trainingType, advance, category, importance}) => {
+           
+        if((category === 'Main' && byCategoryArray.length <= 3) || 
+        (byCategoryArray.length >= 3 && byCategoryArray.length < 6 && category === 'Accsessory')) {
+            let result
+            result = Math.floor(importance * Math.random())
+            console.log(result)
+            if(result >= (importance * 0.5)) {
+                byCategoryArray.push(
+                    <ul key={id}>
+                    <h5>{name.toUpperCase()}</h5>
+                    <li>Excercise difficulty: {advance}</li>
+                    <li>Working muscles: <MapMuscles id={id}/></li>
+                    <li>Training type: {trainingType}</li>
+                    <hr />
+                </ul>
+                )
+            } 
+            
+        }
+        console.log(byCategoryArray)
+        return (
+           
+            <div>{byCategoryArray}</div>
+        )})
+    return (
+        <div>{byCategoryArray}</div>
+    )
 }
 
 

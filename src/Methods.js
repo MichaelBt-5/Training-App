@@ -39,45 +39,71 @@ const ListExcercises = ({ items }) => {
     )
 }
 
+export const MapMuscles = ({ id }) => {
+    let ListOfMuscles = []
+
+    excerciseToMuscle.filter(x => x.excerciseId === id ? 
+              muscles.filter(({ id, muscle }) => id === x.muscleId ?
+              ListOfMuscles.push(muscle + " ") : null) : null)
+        
+                return ( <span>{ListOfMuscles}</span> )
+}
+
+
 export const DoubleFilter = ({ data }) => {
     const filteredDoubles = excerciseList
         .filter(x => x.difficulty <= data.difficulty && x.trainingType === data.trainingType)
+        .filter(item => importanceFiltering(item))
     const filterDifficulty = excerciseList.filter(x => x.difficulty <= data.difficulty)
+        .filter(item => importanceFiltering(item))
     const filterTypes = excerciseList.filter(x => x.trainingType === data.trainingType)
-    
+        .filter(item => importanceFiltering(item))
 
+ //   const countDoubles = filteredDoubles.filter(item => item.category === "Main").length
+ //   console.log(countDoubles)
+ //  const finalCountDoubles = () => countDoubles.length > 2 ? countDoubles.splice(1, countDoubles.length) : countDoubles
+ //   console.log(finalCountDoubles)
     if (data.difficulty && data.trainingType) {
         return (
             <div>
-           {!data.trainingDays ? <h3 className='day'>Day 1</h3> : null}
+           {!data.trainingDays ? <h3 className='day'>Training for today</h3> : null}
             <ListExcercises
-                items={filteredDoubles} 
+                items={filteredDoubles}
             />
             </div>
-        )
+                )
     } else if (data.difficulty) {
         return (
             <div>
-            {!data.trainingDays ? <h3 className='day'>Day 1</h3> : null}
+            {!data.trainingDays ? <h3 className='day'>Training for today</h3> : null}
             <ListExcercises
                 items={filterDifficulty}
             />
             </div>
-        )
+                )
     } else if (data.trainingType) {
         return (
             <div>
-           {!data.trainingDays ? <h3 className='day'>Day 1</h3> : null}
+           {!data.trainingDays ? <h3 className='day'>Training for today</h3> : null}
             <ListExcercises
                 items={filterTypes}
             />
             </div>
-        )
+                )
     } else {
         return null
     }
-
 }
+
+function importanceFiltering(item) {
+    let result = Math.floor(item.importance * Math.random())
+    if (result >= (item.importance * 0.5)) {
+       return true
+    } else {
+        return false
+    }
+} 
+
 export const MapTrainingDays = ({data}) => {
     let array = []
     let counter = data.trainingDays
@@ -95,49 +121,5 @@ export const MapTrainingDays = ({data}) => {
             return array
     
 }
-
-export const MapMuscles = ({ id }) => {
-    let ListOfMuscles = []
-
-    excerciseToMuscle.filter(x => x.excerciseId === id ? 
-              muscles.filter(({ id, muscle }) => id === x.muscleId ?
-              ListOfMuscles.push(muscle + " ") : null) : null)
-        
-                return ( <span>{ListOfMuscles}</span> )
-}
-
-
-export const ImportanceFiltering = () => {
-    let byCategoryArray = []
-      excerciseList.map(({id, name, trainingType, advance, category, importance}) => {
-           
-        if((category === 'Main' && byCategoryArray.length <= 3) || 
-        (byCategoryArray.length >= 3 && byCategoryArray.length < 6 && category === 'Accsessory')) {
-            let result
-            result = Math.floor(importance * Math.random())
-            console.log(result)
-            if(result >= (importance * 0.5)) {
-                byCategoryArray.push(
-                    <ul key={id}>
-                    <h5>{name.toUpperCase()}</h5>
-                    <li>Excercise difficulty: {advance}</li>
-                    <li>Working muscles: <MapMuscles id={id}/></li>
-                    <li>Training type: {trainingType}</li>
-                    <hr />
-                </ul>
-                )
-            } 
-            
-        }
-        console.log(byCategoryArray)
-        return (
-           
-            <div>{byCategoryArray}</div>
-        )})
-    return (
-        <div>{byCategoryArray}</div>
-    )
-}
-
 
 export default ListExcercises

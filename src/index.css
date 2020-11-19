@@ -98,6 +98,35 @@
 .startingpage {
   font-size: 25px;
   font-weight: bold;
-  margin-top: 300px;
+  margin-top: 120px;
   color: #D9CCC1;
+ 
 }
+.customIcon {
+  position: absolute;
+  left: auto;
+  right: 10px;
+  text-indent: 32px;
+  top: 20px;
+}
+.surveyPage {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-color: rgb(5, 5, 5);
+  border: 3px solid;
+  border-radius: 5px; 
+  padding: 30px;
+  padding-top: 40px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.surveyPageElements {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px; 
+  box-sizing: border-box;
+  
+}
+

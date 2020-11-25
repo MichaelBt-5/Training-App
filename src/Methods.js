@@ -1,5 +1,7 @@
 import React from 'react'
+import Tooltip from './Tooltip'
 import excerciseList, { excerciseToMuscle, muscles } from './excerciseList'
+import './Tooltip.css'
 
 
 
@@ -12,7 +14,11 @@ const ListExcercises = ({ items }) => {
             if (item.muscleGroup === muscle.muscle) {
                 array.push(
                     <ul key={item.id}>
-                        <h5>{item.name.toUpperCase()}</h5>
+                        <div>
+                            <Tooltip content={item.info} direction='right' crop='end'>
+                            <h5>{item.name.toUpperCase()}</h5>
+                            </Tooltip>
+                        </div>
                         <li>Excercise difficulty: {item.advance}</li>
                         <li>Working muscles: <MapMuscles id={item.id}/></li>
                         <li>Training type: {item.trainingType}</li>

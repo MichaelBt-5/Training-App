@@ -53,6 +53,7 @@ const excerciseList = [
         category: "Main",
         subcategory: "",
         importance: 70,
+        info: 'A software engineer that really likes working with user interfaces. Writes mostly JS at a small (but mighty!) Danish startup. Loves cooking.',
     },
     {
         name: 'Back squat',

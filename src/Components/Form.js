@@ -8,6 +8,8 @@ import Navbar from './Navbar'
 
 
 
+
+
 class Form extends React.Component {
   constructor() {
     super() 
@@ -18,6 +20,7 @@ class Form extends React.Component {
       showBase: false,
       muscleGroup: '',
       isClicked: false,
+      
     }
     this.handleChange = () => {
         const { value, name } = window.event.target
@@ -41,6 +44,7 @@ class Form extends React.Component {
         }
       })
     }
+    
   }
   render() {
     
@@ -63,8 +67,12 @@ class Form extends React.Component {
        <br/>
         {this.state.isClicked && this.state.trainingDays ? 
         <MapTrainingDays data={this.state} /> : this.state.isClicked ? <DoubleFilter data={this.state} /> : null}
-        {this.state.showBase ? <ListExcercises items={excerciseList} muscle={muscles} /> : null}
-         
+        {this.state.showBase ? 
+        <ListExcercises 
+            items={excerciseList} 
+            muscle={muscles} 
+             /> : null}
+        
       </div>
     )
   }

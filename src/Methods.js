@@ -15,13 +15,14 @@ const ListExcercises = ({ items }) => {
                 array.push(
                     <ul key={item.id}>
                         <div>
-                            <Tooltip content={item.info} direction='right' crop='end'>
+                            <Tooltip content={item.info} direction='right' image={item.image}>
                             <h5>{item.name.toUpperCase()}</h5>
                             </Tooltip>
                         </div>
                         <li>Excercise difficulty: {item.advance}</li>
-                        <li>Working muscles: <MapMuscles id={item.id}/></li>
                         <li>Training type: {item.trainingType}</li>
+                        <br/>
+                        <h5>Working muscles:</h5> <MapMuscles id={item.id}/>
                         <hr />
                     </ul>
                 )
@@ -49,10 +50,19 @@ export const MapMuscles = ({ id }) => {
     let ListOfMuscles = []
 
     excerciseToMuscle.filter(x => x.excerciseId === id ? 
-              muscles.filter(({ id, muscle }) => id === x.muscleId ?
-              ListOfMuscles.push(muscle + " ") : null) : null)
+              muscles.filter(({ id, muscle, image, name}) => id === x.muscleId ?
+              ListOfMuscles.push(
+                  muscle !== 'Back' ?
+                    <li key={id}>
+                        <Tooltip 
+                            name={name} 
+                            image={image} 
+                            direction='right'>
+                            {muscle}
+                        </Tooltip>
+                  </li> : null) : null) : null)
         
-                return ( <span>{ListOfMuscles}</span> )
+                return ( <div>{ListOfMuscles}</div> )
 }
 
 

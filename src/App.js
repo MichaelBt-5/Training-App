@@ -5,6 +5,7 @@ import StartingPage from './Components/StartingPage'
 import Popular from './Components/Popular'
 import About from './Components/About'
 import Home from './Components/Home'
+import 'rsuite/lib/styles/index.less';
 
 
 function App() {

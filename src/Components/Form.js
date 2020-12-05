@@ -20,11 +20,12 @@ class Form extends React.Component {
       showBase: false,
       muscleGroup: '',
       isClicked: false,
-      
+      bodyParts: '',
     }
     this.handleChange = () => {
-        const { value, name } = window.event.target
-        this.setState({[name]: value}) 
+        const { value, name, type, checked } = window.event.target
+        type === 'checkbox' ? this.setState({[name]: checked}) : this.setState({[name]: value}) 
+        
     }
     this.handleClick = () => {
       this.setState(prevState =>  {

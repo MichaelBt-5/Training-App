@@ -23,12 +23,13 @@ const Tooltip = (props) => {
       onMouseEnter={showTip}
       onMouseLeave={hideTip}
     >
-      {/* Wrapping */}
+     
       {props.children}
       {active && (
         <div className={`Tooltip-Tip ${props.direction || "top"}`}>
-          {/* Content */}
-          {props.content}
+         
+          <img className='Image' src={props.image} alt='dupa'/>
+         {!props.name ? <div className='dupa'>{props.content}</div> : <div className='dupa2'>{props.name}</div> }
         </div>
       )}
     </div>

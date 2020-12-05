@@ -9,6 +9,8 @@ const excerciseList = [
         category: "Accsessory",
         subcategory: "",
         importance: 30,
+        image: '',
+        info: 'Strength excercise concentrated on developing the biceps brachii muscle. Movement most usually starts with fully extended elbows and supinated forearms, then biceps contracts to lift the weight right above the shoulders.',
     },
     {
         name: 'Triceps extension',
@@ -20,6 +22,8 @@ const excerciseList = [
         category: "Accsessory",
         subcategory: "",
         importance: 30,
+        image: '',
+        info: 'Standing triceps extansions is mainly focused on the biggest arm extensor – triceps. Movement begins with arm in the overhead position and flexed forearm. Next triceps lift the weight until forearm is fully extended.',
     },
     {
         name: 'Leg press',
@@ -31,6 +35,8 @@ const excerciseList = [
         category: "Accsessory",
         subcategory: "",
         importance: 40,
+        image: 'https://media.istockphoto.com/vectors/fitness-gym-young-man-doing-leg-press-machine-exercises-flat-vector-vector-id1272598310?k=6&m=1272598310&s=612x612&w=0&h=ujwW3Jvadg0vWFgZOB3H2kav47KGMARnj4Q47u6EP8k=',
+        info: 'Leg press is excercise performed on a machine of the same name, where you push away the weight in the seated position using your legs. It can help evaluate the overall lower body strength and works good as an accsessory for free weight leg training.',
     },
     {
         name: 'Bench press',
@@ -42,6 +48,8 @@ const excerciseList = [
         category: "Main",
         subcategory: "",
         importance: 80,
+        image: 'https://samequizy.pl/wp-content/uploads/2017/03/filing_images_2d6cf7ae98ad-2.jpeg',
+        info: 'Bench press is the major excercise focused on buliding and developing strength of pectoralis major muscles and triceps. It is performed on the bench with the stright barbell. The movement begins on the top, where wrists are in the line with the shoulders perpendicularly to the floor. Movement down should be done in the way that forearms would remain perpandicular to the floor and elbows would be rigged at the 45 degree angle to the trunk. Movement up is performer in the same manner.',
     },
     {
         name: 'Barbell row',
@@ -53,7 +61,8 @@ const excerciseList = [
         category: "Main",
         subcategory: "",
         importance: 70,
-        info: 'A software engineer that really likes working with user interfaces. Writes mostly JS at a small (but mighty!) Danish startup. Loves cooking.',
+        image: 'https://www.tabletowo.pl/wp-content/uploads/2018/07/kaczka-miniatura.jpeg',
+        info: 'Barbell row is the excercise focused on buliding all upper back muscles. It is performed mainly with the stright barbell. To do this excercise properly you need to lean forward with your back stright and slightly flex your knees to the point where barbell is on the level of your kneecaps and behind the line of the shoulder. On the way up the barbell is touching the thighs all the time. Movement ends with the weight touching your belly.',
     },
     {
         name: 'Back squat',
@@ -65,6 +74,8 @@ const excerciseList = [
         category: "Main",
         subcategory: "",
         importance: 100,
+        image: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/female-athlete-exercising-with-barbell-in-gym-royalty-free-image-1569411677.jpg?resize=480:*',
+        info: 'Backsquat is the best excercise to build and develop your quads and glutes strength. You start with the barbell lying on your trapezius muscle right below your neck and stand width the same as your normal air squat, usually a little wider than hip width. On the way down you should always control the movement, your back should remain stright, your knees should be in the line of your toes and feet must touch the ground with all its surface. Movement up should be done the same way, exspecially pay attention to the position of the trunk so it remains in the same degree in relations to the floor.',
     },
     {
         name: 'Air squat',
@@ -76,6 +87,8 @@ const excerciseList = [
         category: "Accsessory",
         subcategory: "",
         importance: 50,
+        image: '',
+        info: 'Air squat is the simplest form of squat excercise where you are doing a movement without any additional weight. However it still requiers the mobility to perform the full squat in the proper manner just like in the backsquat or front squat. Correct technic is also necessary to better prepare your body to the heavier lifts in the future.',
     },
     {
         name: 'Ergometer row',
@@ -87,6 +100,8 @@ const excerciseList = [
         category: "Accsessory",
         subcategory: "",
         importance: 0,
+        image: 'https://www.runners-world.pl/media/lib/2914/ergometr-wioslarski-trening-biegacza-sh_411929293.jpg',
+        info: 'Ergometer row is considered as the low intensity cardio excercise which engages majority of muscles in your body including back, legs, arms, and abdomen. It is the very benefitial excercise to warm you up before the main part of your training and when you care about your condition, it can be treated as good workout itself.',
     },
     {
         name: 'Dips',
@@ -98,6 +113,8 @@ const excerciseList = [
         category: "Main",
         subcategory: "",
         importance: 50,
+        image: '',
+        info: 'Dips is pretty advanced calisthenics excercise which is focused on buliding your pectoralis and tricpes strength. You can do it on parallets or on gymnastic rings for additional challange. You start on the top with your arms fully extended and begin to go down by flexing your elbows until your chest will be right above the line of your wrists. Then you go up the same way and try to maintain the same position of the shoulders. ',
     },
     {
         name: 'Deadlift',
@@ -109,6 +126,8 @@ const excerciseList = [
         category: "Main",
         subcategory: "",
         importance: 90,
+        image: 'https://i.ytimg.com/vi/oHnh3XRFyDE/maxresdefault.jpg',
+        info: 'Deadlift is one of the main strength excercises which perfectly develops the overall strength and majority of muscles in the body. In conventional deadlift where your width stand is more less width of your hips your starting position is where your shins are in the conntact with the barbell, your back are stright and tight and your sholuder line is forward to the barbell line. On the way up, until you reach the heigth of your knees, you try to maintain the same position of your trunk relative to the ground. Barbell should have the conntact with your legs all the time during the lift.',
     },
     {
         name: 'Chin ups',
@@ -120,6 +139,8 @@ const excerciseList = [
         category: "Accsessory",
         subcategory: "",
         importance: 60,
+        image: '',
+        info: 'Chin up is the variation of classic pull up where you are using the reverse grip to engage the biceps more due to supination of the forearms. Technic of lifting yourself is similar to the pull ups so you remember to your shoulder blade muscles before flexing your elbows on the way up, and going down with control.',
     },
     {
         name: 'Push ups',
@@ -131,6 +152,8 @@ const excerciseList = [
         category: "Accsessory",
         subcategory: "",
         importance: 60,
+        image: '',
+        info: 'Push u pis the common calishenics eexcercise where you use your arm strength in the plank position to lift your body. It begins with fully extended elbows on sholuders, trunk and hips in the same line. Then by flexing your elbows and maintaining the body position you go down to the point where your chest is bearly touching the ground. Movement up is the mirror reflection.',
     },
     {
         name: 'Pectoral fly',
@@ -142,6 +165,8 @@ const excerciseList = [
         category: "Main",
         subcategory: "",
         importance: 50,
+        image: '',
+        info: '',
     },
     {
         name: 'French press',
@@ -153,6 +178,8 @@ const excerciseList = [
         category: "Accsessory",
         subcategory: "",
         importance: 40,
+        image: '',
+        info: '',
     },
     {
         name: 'Hammer curl',
@@ -164,6 +191,8 @@ const excerciseList = [
         category: "Accsessory",
         subcategory: "",
         importance: 20,
+        image: '',
+        info: '',
     },
 ]
 
@@ -174,52 +203,78 @@ export const muscles = [
     },
     {
         muscle: 'Biceps',
+        name: 'Musculus biceps brachii',
+        image: 'https://media.istockphoto.com/photos/biceps-muscles-anatomy-muscles-isolated-on-white-picture-id533845894?k=6&m=533845894&s=612x612&w=0&h=-AC9Ngfe_fLtMnCO_GU38OXdS84cQ4IhegLSSuDdh_w=',
         id: 2,
     },{
         muscle: 'Pecs',
+        name: 'Musculus pectoralis major',
+        image: 'https://media.istockphoto.com/photos/chest-muscles-pectoralis-major-and-minor-anatomy-muscles-picture-id533845778?k=6&m=533845778&s=612x612&w=0&h=64hQFH0lPStpK6atnDdnc_u8iFK-DgtMUnYaBujm7eE=',
         id: 3,
     },{
         muscle: 'Quadriceps',
+        name: 'Musculus quadriceps femoris',
+        image: 'https://media.istockphoto.com/photos/vastus-medialis-muscle-anatomy-muscles-isolated-on-white-picture-id533844556?k=6&m=533844556&s=612x612&w=0&h=tKlCe1f24V_2zil-5u3Lfx9O5JX_aJQNkWMBbzeC7VU=',
         id: 4,
     },
     {
         muscle: 'Triceps',
+        name: 'Musculus triceps brachii',
+        image: 'https://media.istockphoto.com/photos/triceps-muscles-anatomy-muscles-isolated-on-white-picture-id531791762?k=6&m=531791762&s=612x612&w=0&h=v7nE-FrVUXsRCfEYlmvXAOF-11EevCrbrybVPycFdLE=',
         id: 5,
     },
     {
         muscle: 'Glutes',
+        name: 'Musculus gluteus maximus',
+        image: 'https://media.istockphoto.com/photos/gluteal-muscles-gluteus-maximus-anatomy-muscles-isolated-picture-id533845216?k=6&m=533845216&s=612x612&w=0&h=yLbSWAXSZA1mQnRDrISbafJdkzHpNBn8ieiHN_WtSDQ=',
         id: 6,
     },
     {
         muscle: 'Hamstrings',
+        name: 'Musculi semimebranosus, semitendinosus, biceps femoris',
+        image: 'https://media.istockphoto.com/photos/hamstrings-male-muscles-anatomy-muscle-isolated-on-white-picture-id531791900?k=6&m=531791900&s=612x612&w=0&h=JG0mWwChfbU4Jg84Ylnc9x3cjectVYhDZ_OS_kICUgQ=',
         id: 7,
     },
     {
         muscle: 'Deltoids',
+        name: 'Musculus deltoideus',
+        image: 'https://media.istockphoto.com/photos/deltoris-muscles-anterior-anatomy-muscles-isolated-on-white-picture-id531792828?k=6&m=531792828&s=612x612&w=0&h=WrNGovF28k5bPMIp95eihPfFkv_i3zp0koq4fQyilW8=',
         id: 8,
     },
     {
         muscle: 'Lats',
+        name: 'Musculus latissimus dorsi',
+        image: 'https://media.istockphoto.com/photos/latissimus-dorsi-anatomy-muscles-isolated-on-white-picture-id531792040?k=6&m=531792040&s=612x612&w=0&h=izqG2ZNZtVoWAJnQkJZiSrc0l1DTrEYo_Z0iR3oWa04=',
         id: 9,
     },
     {
         muscle: 'Abs',
+        name: 'Musculus rectus abdominis',
+        image: 'https://media.istockphoto.com/photos/rectus-abdominis-abdominal-muscles-anatomy-muscles-isolated-picture-id531793434?k=6&m=531793434&s=612x612&w=0&h=J84E4hh8-Ib5jVubaP9PfEuu2zY97SDz1EFaFHV2LCk=',
         id: 10,
     },
     {
         muscle: 'Obliques',
+        name: 'Musculi obliquus abdominis',
+        image: 'https://media.istockphoto.com/photos/external-oblique-muscles-anatomy-muscles-isolated-on-white-picture-id531793400?k=6&m=531793400&s=612x612&w=0&h=ljxww_RCYCkoYaaFZdXv3xvD5jzlioHbIhO1Yag7L8s=',
         id: 11,
     },
     {
         muscle: 'Trapezius',
+        name: 'Musculus trapezius',
+        image: 'https://media.istockphoto.com/photos/trapezius-muscle-anatomy-muscles-isolated-on-white-picture-id531792188?k=6&m=531792188&s=612x612&w=0&h=Gv6Ia6mNDPTYgt3-ouMzDZDOWUPNWrSUloD-ZzjTVKM=',
         id: 12,
     },
     {
         muscle: 'Calfs',
+        name: 'Musculi triceps surae',
+        image: 'https://media.istockphoto.com/photos/calf-muscle-gastrocnemius-plantar-anatomy-muscle-isolated-picture-id533845352?k=6&m=533845352&s=612x612&w=0&h=cCwNL-NvQP2kGHjjMsPf3938nQ8domfP-6lU1bIEBA8=',
         id: 13,
     },
     {
         muscle: 'Erector',
+        name: 'Musculi erector spinae',
+        image: 'https://media.istockphoto.com/photos/the-deep-back-muscles-picture-id481394108?k=6&m=481394108&s=612x612&w=0&h=njYtwVF-jERwEOR93xBoLiNLk5odNMy8VYbjLqnSzMA=',
         id: 14,
     },
     
@@ -425,6 +480,25 @@ export const excerciseToMuscle = [
     {
         muscleId: 2,
         excerciseId: 15,
+    },
+]
+
+export const bodyParts= [
+    {
+        label: "Full body workout",
+        value: "Full body workout",
+    },
+    {
+        label: "Upper body",
+        value: "Upper body",
+    },
+    {
+        label: "Lower body",
+        value: "Lower body",
+    },
+    {
+        label: "Core",
+        value: "Core",
     },
 ]
 

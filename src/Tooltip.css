@@ -3,40 +3,82 @@
     --tooltip-text-color:black;
     --tooltip-background-color: white;
     --tooltip-margin: 30px;
-    --tooltip-arrow-size: 6px;
+    --tooltip-arrow-size: 6px;   
+  }
+  .dupa {
+    
+    max-width: 100%;
+    min-height: 0%;
+    max-height: 100%;
+    min-width: 0%;
+    gap: 5px;
+    padding: 6px;
+    
+  }
+  .dupa:empty {
+      display: none;
+  }
+  .dupa2{
+    max-width: 100%;
+    min-height: 0%;
+    max-height: 100%;
+    min-width: 0%;
+    gap: 5px;
+    padding: 6px;
+    font-style: italic;
+    text-align: center;
+    font-size: 20px;
+  }
+  .nothing:empty {
+    display: none;
+  }
+ 
+  .Image {
+      max-width: 100%;
+      max-height: 100%;
+      min-width: 30vw!important;
+      min-height: 10vh!important;
+      
+      padding: 0px;
+      border: solid 2px black;
+      border-radius: 1px;
+     
      
   }
+  
   
   /* Wrapping */
   .Tooltip-Wrapper {
     display: inline-block;
-    position: relative;
-    
-    
+    position: relative; 
   }
- 
   
   /* Absolute positioning */
   .Tooltip-Tip {
+    display: block;
     position: absolute;
     border-radius: 4px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 6px;
     color: var(--tooltip-text-color);
     background: var(--tooltip-background-color);
-    font-size: 14px;
-    font-family: sans-serif;
+    font-size: 1.1vw;
+    font-family: 'Work Sans', sans-serif;
     line-height: 2;
     z-index: 100;
-    white-space: nowrap;
-    
-    
+    min-width: 30vw!important;
+    min-height: 30vh!important;
+    max-height: 80vh!important;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    text-align: justify;
   }
-  
+ 
   /* CSS border triangles */
   .Tooltip-Tip::before {
-    content: " ";
+    content: "";
     left: 50%;
     border: solid transparent;
     height: 0;
@@ -45,7 +87,6 @@
     pointer-events: none;
     border-width: var(--tooltip-arrow-size);
     margin-left: calc(var(--tooltip-arrow-size) * -1);
-    
   }
   
   /* Absolute positioning */
@@ -63,6 +104,8 @@
     left: calc(100% + var(--tooltip-margin));
     top: 50%;
     transform: translateX(0) translateY(-50%);
+    
+    
   }
   /* CSS border triangles */
   .Tooltip-Tip.right::before {
